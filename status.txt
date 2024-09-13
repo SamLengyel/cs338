@@ -1,0 +1,3 @@
+Sam Lengyel
+- My plan for using Kali: Live USB
+- Status of my Kali installation: on a Live USB, both Kali 2024.2 and Kali (Everything).
