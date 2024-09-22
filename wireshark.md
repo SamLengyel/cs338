@@ -11,12 +11,16 @@ Sam Lengyel
 2. The client uses port 38570 for this interaction.
 3. The client needs a port to have a specific location to receive the network communication on and to allow multiple different connections at once, rather than just using the one IP address.
 4. Frame 4 - the data in the packet window of Wireshark agrees:
-```4	132.163.96.1	10.150.255.57	DAYTIME	DAYTIME Response```
+```
+4	132.163.96.1	10.150.255.57	DAYTIME	DAYTIME Response
+```
 
 5. [SYN] means Synchronize, [SYN, ACK] means Synchronize-Acknowledge, and [ACK] means acknowledge. The client sends a synchronize request to the server, the server confirms that it received the synchronize request, and then the client acknowledges the response of the server.
 6. The daytime server initiated the closing of the TCP connection because Frame 6, the first frame with [FIN, ACK] has a source IP of 13.163.96.1 and a source port of 13, which are both the source IP and port of the daytime server.
 
-```6	132.163.96.1	10.150.255.57	TCP	13 → 38570 [FIN, ACK] Seq=52 Ack=1 Win=65664 Len=0 TSval=3993172995 TSecr=2847968752```
+```
+6	132.163.96.1	10.150.255.57	TCP	13 → 38570 [FIN, ACK] Seq=52 Ack=1 Win=65664 Len=0 TSval=3993172995 TSecr=2847968752
+```
 
 ## HTTP
 1. 3 TCP connections were opened; there are three cases of [SYN] followed by [SYN, ACK].
@@ -32,10 +36,14 @@ Sam Lengyel
 
 2. Yes; Frame 4 is a HTTP GET request for index.html.
 
-```4	10.150.255.57	172.233.221.124	HTTP	GET /index.html HTTP/1.1```
+```
+4	10.150.255.57	172.233.221.124	HTTP	GET /index.html HTTP/1.1
+```
 
 3. Yes; Frame 8 is a HTTP GET request for jeff-square-colorado.jpg.
-```8	10.150.255.57	172.233.221.124	HTTP	GET /jeff-square-colorado.jpg HTTP/1.1```
+```
+8	10.150.255.57	172.233.221.124	HTTP	GET /jeff-square-colorado.jpg HTTP/1.1
+```
 
 
 ## Questions 
