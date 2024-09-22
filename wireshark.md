@@ -11,9 +11,11 @@ Sam Lengyel
 2. The client uses port 38570 for this interaction.
 3. The client needs a port to have a specific location to receive the network communication on and to allow multiple different connections at once, rather than just using the one IP address.
 4. Frame 4 - the data in the packet window of Wireshark agrees:
+
 ```
 4	132.163.96.1	10.150.255.57	DAYTIME	DAYTIME Response
 ```
+
 5. [SYN] means Synchronize, [SYN, ACK] means Synchronize-Acknowledge, and [ACK] means acknowledge. The client sends a synchronize request to the server, the server confirms that it received the synchronize request, and then the client acknowledges the response of the server.
 6. The daytime server initiated the closing of the TCP connection because Frame 6, the first frame with [FIN, ACK] has a source IP of 13.163.96.1 and a source port of 13, which are both the source IP and port of the daytime server.
 
