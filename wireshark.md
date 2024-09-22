@@ -33,12 +33,15 @@ Sam Lengyel
 ```
 
 2. Yes; Frame 4 is a HTTP GET request for index.html.
+
 ```
 4	10.150.255.57	172.233.221.124	HTTP	GET /index.html HTTP/1.1
 ```
 
 3. Yes; Frame 8 is a HTTP GET request for jeff-square-colorado.jpg.
-```8	10.150.255.57	172.233.221.124	HTTP	GET /jeff-square-colorado.jpg HTTP/1.1```
+```
+8	10.150.255.57	172.233.221.124	HTTP	GET /jeff-square-colorado.jpg HTTP/1.1
+```
 
 
 ## Questions 
