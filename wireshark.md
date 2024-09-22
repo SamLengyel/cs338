@@ -6,7 +6,7 @@ Sam Lengyel
 ```
 1	10.150.255.57	132.163.96.1	TCP	38570 → 13 [SYN] Seq=0 Win=32160 Len=0 MSS=1340 SACK_PERM TSval=2847968711 TSecr=0 WS=128
 2	132.163.96.1	10.150.255.57	TCP	13 → 38570 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1340 WS=64 SACK_PERM TSval=3993172954 TSecr=28479687113	
-3   10.150.255.57	132.163.96.1	TCP	38570 → 13 [ACK] Seq=1 Ack=1 Win=32256 Len=0 TSval=2847968752 TSecr=3993172954
+3	10.150.255.57	132.163.96.1	TCP	38570 → 13 [ACK] Seq=1 Ack=1 Win=32256 Len=0 TSval=2847968752 TSecr=3993172954
 ```
 2. The client uses port 38570 for this interaction.
 3. The client needs a port to have a specific location to receive the network communication on and to allow multiple different connections at once, rather than just using the one IP address.
