@@ -16,9 +16,8 @@ Sam Lengyel
 ```
 5. [SYN] means Synchronize, [SYN, ACK] means Synchronize-Acknowledge, and [ACK] means acknowledge. The client sends a synchronize request to the server, the server confirms that it received the synchronize request, and then the client acknowledges the response of the server.
 6. The daytime server initiated the closing of the TCP connection because Frame 6, the first frame with [FIN, ACK] has a source IP of 13.163.96.1 and a source port of 13, which are both the source IP and port of the daytime server.
-```
-6	132.163.96.1	10.150.255.57	TCP	13 → 38570 [FIN, ACK] Seq=52 Ack=1 Win=65664 Len=0 TSval=3993172995 TSecr=2847968752
-```
+
+`6	132.163.96.1	10.150.255.57	TCP	13 → 38570 [FIN, ACK] Seq=52 Ack=1 Win=65664 Len=0 TSval=3993172995 TSecr=2847968752`
 
 ## HTTP
 1. 3 TCP connections were opened; there are three cases of [SYN] followed by [SYN, ACK].
