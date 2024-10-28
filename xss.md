@@ -9,7 +9,7 @@ e. The FDF server reads the cookie sent by the browser when it sends each HTTP G
 f. When the theme changes, the browser sends a new HTTP GET request to the server when the page is reloaded, which includes the new cookie with the new theme.
 g. While on http://cs338.jeffondich.com/fdf/ or a page without the ?theme=themeColor part, change the cookie directly from the inspector in **Storage** -> **Cookies** -> http://cs338.jeffondich.com/fdf/ -> **theme** to blue, red, or default, then reload the page.
 h. After enabling intercept, in the content of the HTTP GET request for the page, in the intercepted request, change the Cookie from **theme=red** to **theme=blue** and ensure that the URL doesn't have an overriding color appended to the end of it with **?theme=themeColor** for the request, removing it if necessary, then forward the request.
-i. My browser stores cookies in `~/.librewolf/<profile path>/cookies.sqlite` (the ones that are told not to clear on browser restart, at least)
+i. My browser stores cookies in `~/.librewolf/<profile path>/cookies.sqlite`.
 
 a. 
 1. Moriarty logs in as himself.
@@ -21,7 +21,7 @@ a.
 
 b. By setting the cookie values via javascript, the attacker could change the user's theme (by modifying the theme cookie) or log the user out by clearing the `session` cookie. They could also store the cookie and submit it in a new HTTP POST request on the server.
 
-c. The attacker could redirect the user to another page that they have more direct control over and ask for the user's credentials to access the page; they could also forward the user's cookies to this page by reading them and then passing them on to impersonate the user on the main page. 
+c. The attacker could redirect the user to another page that they have more direct control over and ask for the user's credentials to access the page; they could also forward the user's cookies to this page by reading them and then passing them on to impersonate the user on the main page.
 
 d. 
 - The server could sanitize the input, stripping certain or all HTML tags from the message before storing and displaying it. This does reduce user freedom, but also XSS possibilities.
