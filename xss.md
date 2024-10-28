@@ -19,7 +19,7 @@ a.
     5. Later (time indeterminate), a user clicks on a post, sending a HTTP GET request to the server which the server responds to and displays the page to the user, complete with the HTML/js from Moriarty.
     6. The `<span>` displays the altered text color, while the `<script>` executes on the page load, popping up an alert when or sometimes before the page loads.
 
-b. By setting the cookie values via javascript, the attacker could change the user's theme or log the user out by clearing the `session` cookie.
+b. By setting the cookie values via javascript, the attacker could change the user's theme (by modifying the theme cookie) or log the user out by clearing the `session` cookie. They could also store the cookie and submit it in a new HTTP POST request on the server.
 
 c. The attacker could redirect the user to another page that they have more direct control over and ask for the user's credentials to access the page; they could also forward the user's cookies to this page by reading them and then passing them on to impersonate the user on the main page. 
 
