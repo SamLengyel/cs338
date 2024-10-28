@@ -2,13 +2,21 @@
 By Sam Lengyel
 
 a. Yes, there is a cookie - its name is **theme** and its values can be **default**, **red**, or **blue**. There's also a **session** cookie that holds a unique value identifying the user once they have logged in.
+
 b. Yes; the cookie changes from **default** to whatever the user selects; **default**, **red** or **blue**. 
+
 c. The request from the user features a **Cookie: theme = red** header while the server's response has **Set-Cookie: theme=red; Expires=timestamp**
+
 d. Yes; the cookie has not expired yet so it remains set.
+
 e. The FDF server reads the cookie sent by the browser when it sends each HTTP GET request to the server because the cookie is included in each request. It also appends **?theme=themeColor**  to the URL that it asks for, as a backup.
+
 f. When the theme changes, the browser sends a new HTTP GET request to the server when the page is reloaded, which includes the new cookie with the new theme.
+
 g. While on http://cs338.jeffondich.com/fdf/ or a page without the ?theme=themeColor part, change the cookie directly from the inspector in **Storage** -> **Cookies** -> http://cs338.jeffondich.com/fdf/ -> **theme** to blue, red, or default, then reload the page.
+
 h. After enabling intercept, in the content of the HTTP GET request for the page, in the intercepted request, change the Cookie from **theme=red** to **theme=blue** and ensure that the URL doesn't have an overriding color appended to the end of it with **?theme=themeColor** for the request, removing it if necessary, then forward the request.
+
 i. My browser stores cookies in `~/.librewolf/<profile path>/cookies.sqlite`.
 
 a. 
